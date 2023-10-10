@@ -19,14 +19,13 @@ jobs:
           uses: actions/checkout@v4  
         - name: Check if file begins with "//"
           run: |
-          # Set the file path you want to check
-          FILE_PATH="my-app.php"
+                # Set the file path you want to check
+                FILE_PATH="my-app.php"
           
-          # Check if the file begins with "//"
-          if [[ "$(head -n 1 "$FILE_PATH")" == "//"* ]]; then
-            echo "File begins with '//'."
-          else
-            echo "File does not begin with '//'."
-            exit 1
-          fi
-          
+                # Check if the file begins with "//"
+                if [[ "$(head -n 1 "$FILE_PATH")" == "//"* ]]; then
+                    echo "File begins with '//'."
+                else
+                    echo "File does not begin with '//'."
+                    exit 1
+                fi
