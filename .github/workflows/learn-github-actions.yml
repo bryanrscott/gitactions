@@ -23,9 +23,9 @@ jobs:
                 FILE_PATH="my-app.php"
           
                 # Check if the file begins with "//"
-                if [[ "$(head -n 1 "$FILE_PATH")" == "//"* ]]; then
-                    echo "File begins with '//'."
+                if [[ "$(head -n 1 "$FILE_PATH")" == "<?php"* ]]; then
+                    echo "File begins with '<?php'."
                 else
-                    echo "File does not begin with '//'."
+                    echo "File does not begin with '<?php'."
                     exit 1
                 fi
